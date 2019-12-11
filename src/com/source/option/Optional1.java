@@ -18,6 +18,8 @@ public class Optional1 {
 
         Optional optional1=Optional.empty();
         System.out.println(optional.orElse("11"));
+
+
     }
 
 }

@@ -34,6 +34,7 @@ public class ExecuteTest01 {
                     return fibc(20);
                 }
             });
+            System.out.println(task.isDone());
             //获取执行结果
             System.out.println("第"+i+"次计算，结果为"+task.get());
         }

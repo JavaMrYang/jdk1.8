@@ -16,7 +16,7 @@ public class Demo01 {
         //DateTimeFormatter dateTimeFormatter=new DateTimeFormatter();
         System.out.println(LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME));
         System.out.println((System.currentTimeMillis()+""+(int)(Math.random()*1000000)).length());
-
+        //ConcurrentHashMap属于线程安全的
         Map<String,String> map=new ConcurrentHashMap<>();
         System.out.println(((ConcurrentHashMap<String, String>) map).mappingCount());
         Integer i=0;
