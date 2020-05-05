@@ -9,9 +9,13 @@ import java.lang.reflect.Array;
  **/
 public class Test01 {
     public static void main(String[] args) {
-        int[] a={1,2,3};
+        /*int[] a={1,2,3};
         int b[]={4,5,6};
-        new Test01().go(a,b);
+        new Test01().go(a,b);*/
+      /*  int i=1;
+        System.out.println(i++);*/
+        String s="";
+        System.out.println(s);
     }
 
     void go(int []...z){

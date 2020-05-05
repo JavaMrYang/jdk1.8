@@ -4,6 +4,7 @@ package com.source.concrrent;
  * @Author LiuYang
  * @Date 2019/5/28/028  11:15
  * @Version 1.0
+ * 测试synchronized的wait和notify的方法
  **/
 public class MyThead03 {
 
@@ -16,10 +17,11 @@ public class MyThead03 {
                 try {
                     System.out.println(System.currentTimeMillis()+"T1 wait");
                     object.wait();
+                    System.out.println("线程T1等待结束.");
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                System.out.println(System.currentTimeMillis()+"T1 end");
+                System.out.println(System.currentTimeMillis()+" T1 end");
             }
         }
     }
@@ -28,13 +30,15 @@ public class MyThead03 {
         @Override
         public void run() {
             synchronized (object){
-                System.out.println(System.currentTimeMillis()+"T2 start and stop");
+                System.out.println(System.currentTimeMillis()+"T2 start");
                 object.notify();
+                System.out.println("线程对象唤醒");
                 try {
                     Thread.sleep(2000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
+                System.out.println(System.currentTimeMillis()+" T2 end");
             }
         }
     }
