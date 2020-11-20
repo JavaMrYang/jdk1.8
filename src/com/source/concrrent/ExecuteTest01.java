@@ -37,7 +37,10 @@ public class ExecuteTest01 {
             System.out.println(task.isDone());
             //获取执行结果
             System.out.println("第"+i+"次计算，结果为"+task.get());
+            System.out.println("我的任务执行完了:"+task.isDone());
         }
+
+        service.shutdown();
     }
 
     //模拟耗时操作，定义一个斐波那契数列

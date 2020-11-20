@@ -17,17 +17,18 @@ public class TestScheduledThreadPoolExecutor {
     exec.scheduleAtFixedRate(new Runnable() {
       @Override
       public void run() {//每隔一段时间就触发异常
+        System.out.println("================");
         throw new RuntimeException();
-        //System.out.println("================");
+
       }
     }, 1000, 6000, TimeUnit.MILLISECONDS);
 
-   /* exec.scheduleAtFixedRate(new Runnable() {//每隔一段时间打印系统时间，证明两者是互不影响的
+    exec.scheduleAtFixedRate(new Runnable() {//每隔一段时间打印系统时间，证明两者是互不影响的
       @Override
       public void run() {
         System.out.println(System.currentTimeMillis());
       }
-    }, 1000, 2000, TimeUnit.MILLISECONDS);*/
+    }, 1000, 2000, TimeUnit.MILLISECONDS);
   }
 
 }

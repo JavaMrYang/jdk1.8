@@ -19,6 +19,7 @@ public class CompleteTest {
       try {
         TimeUnit.SECONDS.sleep(1);
       } catch (InterruptedException e) {
+        System.out.println("我进入异常代码了!");
       }
       if(new Random().nextInt()%2>=0) {
         int i = 12/0;
@@ -67,7 +68,7 @@ public class CompleteTest {
 
   public static void main(String[] args) throws Exception {
       whenComplete();
-
-      thenApply();
+      //whenComplete();
+      //thenApply();
   }
 }
