@@ -18,5 +18,12 @@ public class SystemCopyDemo01 {
         for (String str : src) {
             System.out.println(str);
         }
+
+        try{
+            System.out.println();
+            return;
+        }finally {
+            System.out.println("我在return之后执行了");
+        }
     }
 }
